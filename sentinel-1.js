@@ -41,43 +41,7 @@ function monthlylayer(D1,D2,t){
 
   var median_vv= clipped.select('VV_Filtered')
   var median_vh= clipped.select('VH_Filtered')
-  // var clippedndwi = ndwi;
-  // var visParams = {min: -30,
-  //   max: 30,
-  // };
-  // Map.addLayer(median_vh,visParams);
-  
-  // MNDWI-2.
-  // var collection = ee.ImageCollection('COPERNICUS/S2_SR')
-  //     .filterDate('2020-04-01', '2020-04-15');
-  
-  // // Reduce the collection by taking the median.
-  // var median = collection.median();
-  // var mndwi2= median.select('B4').subtract(median.select('B12'))
-  //   .divide(median.select('B4').add(median.select('B12')));
-  // var clippedmndwi2 = mndwi2.clipToCollection(t);
-  // var visParams = {min: -1,
-  //   max: 1,
-  // };
-  // Map.addLayer(clippedmndwi2, visParams, 'clipped mndwi2');
-  
-  // var reflectance= (median.select('B3').add(median.select('B4'))
-  //   .add(median.select('B8')).add(median.select('B12'))).divide(40000);
-  // var clippedreflectance = reflectance.clipToCollection(t);
-  // var visParams = {min: 0,
-  //   max: 0.6,
-  // };
-  // Map.addLayer(clippedreflectance, visParams, 'clipped reflectance');
-  
-  // NDWI & MNDWI conditions.
-  // var hybridLayer = clippedmndwi2.add(clippedndwi);
-  // var palette = ['000000', '0000FF', '00FF00', 'FF0000'];
-  // var visParams = {min: -2,
-  //   max: 2,
-  //   // palette:  palette
-  // };
-  // Map.addLayer(hybridLayer, visParams, 'hybrid layer');
-  // Threshold the hybrid band to set water pixels as value 1, mask all else.
+
   var vv_th = median_vv.lt(-19)
     .selfMask()
     .rename('vv_th');
