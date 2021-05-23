@@ -163,7 +163,7 @@ var visParams = {min: 0,
   };
 Map.setCenter(78.3, 19, 12);
 Map.addLayer(sum, visParams);
-var max_num_water = sum.reduceRegion({reducer: ee.Reducer.max(), geometry: tabletouse, scale : 1000});
+var max_num_water = sum.reduceRegion({reducer: ee.Reducer.max(), geometry: tabletouse, scale : buffersize/200});
 print ("Check this value and use approximately 5%-10% as misClasThres value in next line",max_num_water)
 var misClasThres = 2;
 var sum1 = sum.gt(misClasThres).selfMask()
