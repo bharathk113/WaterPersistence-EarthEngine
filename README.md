@@ -14,3 +14,10 @@ Export.image.toDrive({
 - User inputs: 1. Lon,Lat 2. Buffer 3. Date Range 4. Threshold for misclassfication
 - NDWI and MNDWI along with reflectance in multiple bands are used for water classification. 
 - A threshold to account for rare (5%-10%) misclassifications added
+
+## Landsat-8:
+- Water Persistance and Max water spread area for the selected time period are two output layers. 
+- User inputs: 1. Lon,Lat 2. Buffer 3. Date Range 4. Threshold for misclassfication
+- NDWI and MNDWI along with reflectance in multiple bands are used for water classification. 
+- A threshold to account for rare (5%-10%) misclassifications added
+- This might take more time than the Sentinel-2 as some front end computation is introduced to handle the nodata issues. Interested users may contribute to eliminate that part. Thanks in advance
