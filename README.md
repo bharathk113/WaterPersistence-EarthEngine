@@ -28,6 +28,8 @@ Export.image.toDrive({
 - NDWI and MNDWI along with reflectance in multiple bands are used for water classification. 
 - A threshold to account for rare (5%-10%) misclassifications added
 
+[Link to ccde on Earth Engine](https://code.earthengine.google.co.in/?scriptPath=users%2Fbharathkadapala%2FTools%3ASentinel-2-Waterbodies)
+
 ## Landsat-8:
 - Water Persistance and Max water spread area for the selected time period are two output layers. 
 - User inputs: 1. Lon,Lat 2. Buffer 3. Date Range 4. Threshold for misclassfication
@@ -35,8 +37,12 @@ Export.image.toDrive({
 - A threshold to account for rare (5%-10%) misclassifications added
 - This might take more time than the Sentinel-2 as some front end computation is introduced to handle the nodata issues. Interested users may contribute to eliminate that part. Thanks in advance
 
+[Link to code on Earth Engine](https://code.earthengine.google.co.in/?scriptPath=users%2Fbharathkadapala%2FTools%3ALandsat-8-Waterbodies)
+
 ## Sentinel-1:
 - Water Persistance and Max water spread area for the selected time period are two output layers. 
 - User inputs: 1. Lon,Lat 2. Buffer 3. Date Range 4. Threshold for misclassfication
 - A simple band thresholding is used to generate the data. Both VV & VH are considered separately while thresholding. 
 - A threshold to account for rare (5%-10%) misclassifications added
+
+[Link to ccde on Earth Engine](https://code.earthengine.google.co.in/?scriptPath=users%2Fbharathkadapala%2FTools%3ASentinel-1-Waterbodies)
