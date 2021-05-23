@@ -1,5 +1,18 @@
 # WaterPersistence-EarthEngine
 Water persistence from different satellites using Earth Engine
+
+> https://bharathk113.github.io
+
+![GitHub stars](https://img.shields.io/github/stars/bharathk113/bharathk113.github.io)
+![GitHub forks](https://img.shields.io/github/forks/bharathk113/bharathk113.github.io)
+[![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/bharathk113/bharathk113.github.io/commits/master)
+[![Website shields.io](https://img.shields.io/badge/website-up-yellow)](http://bharathk113.github.io/)
+[![Ask Me Anything !](https://img.shields.io/badge/ask%20me-linkedin-1abc9c.svg)](https://www.linkedin.com/in/bharath-reddy-k/)
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+
+:star: Star me on GitHub — it helps!
+
+
 Add this whenever you need to export any layer to your google drive
 ````
 Export.image.toDrive({
