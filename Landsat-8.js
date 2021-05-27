@@ -102,8 +102,10 @@ function monthlylayer(D1,D2,t){
 
 
 var buffersize=200000
+lon = 78.3
+lat = 19
 // location coordinates around which the buffer will be calculated
-var polygon = ee.FeatureCollection(ee.Geometry.Point([78.3, 19]).buffer(buffersize));
+var polygon = ee.FeatureCollection(ee.Geometry.Point([lon,lat]).buffer(buffersize));
 // provide the data range for the process
 var startyear=2017
 var startmonth=6
@@ -185,7 +187,7 @@ var visParams = {min: 0,
     max: 27,
     palette: ['00FFFF', '0000FF'],
   };
-Map.setCenter(78.3, 19, 12);
+Map.setCenter(lon, lat, 12);
 Map.addLayer(sum, visParams);
 var max_num_water = sum.reduceRegion({reducer: ee.Reducer.max(), geometry: tabletouse, scale : buffersize/200});
 print ("Check this value and use approximately 5%-10% as misClasThres value in next line",max_num_water)
